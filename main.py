@@ -90,7 +90,7 @@ if(option=="HomePage"):
     st.write("So without wasting any time,start your exploration")
 if(option=="Visualizations"):
     st.title("Now let's see some charts and graphs to understand the data better:")
-    st.image("img3.jpeg")
+    #st.image("img3.jpeg")
 
     st.subheader("⚽ Comparision of Left Vs Right footed Players--")
     sns.countplot(data['Preferred Foot'],palette='Spectral');
@@ -275,7 +275,7 @@ if(option=="Comparisions"):
         st.write(temp)
 if(option=="Game"):
     st.title("A Game of Luck")
-    st.image("img6.jpeg")
+    #st.image("img6.jpeg")
     st.write("Let's play a very interesting game and test your luck.In this game you need to choose any number of your choice any number for the computer,then system compares players based on your choice of selection totally randomly and then compares various attributes of players and give the results that who get the better card of player You or The Computer.")
     n1=st.slider("Number For You",0,2000)
     n2=st.slider("Number For Computer",0,2000)
