@@ -4,8 +4,8 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
-import warnings
-warnings.filterwarnings("ignore")
+#import warnings
+#warnings.filterwarnings("ignore")
 
 sns.set_style('darkgrid')
 matplotlib.rcParams['font.size'] = 14
@@ -295,3 +295,6 @@ if(option=="Game"):
         st.write("Thanks for Playing.Try different Values to check How Lucky You Are!!")
 
     game(n1,n2)
+
+if __name__ == "__main__":
+	main()   
