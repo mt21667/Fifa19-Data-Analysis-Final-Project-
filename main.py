@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 #import warnings
 #warnings.filterwarnings("ignore")
-
 sns.set_style('darkgrid')
 matplotlib.rcParams['font.size'] = 14
 matplotlib.rcParams['figure.figsize'] = (9, 5)
@@ -98,17 +97,20 @@ if(option=="Visualizations"):
     sns.countplot(data['Preferred Foot'],palette='Spectral');
     plt.title('Number of players of each Preferred Foot');
     st.pyplot(use_container_width=True)#used to view charts
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Comaparision of players among different positions featured in FIFA19--")
     sns.countplot('Position', data = data)
     plt.xticks(rotation=70)
     plt.title(label = 'Comparison of Positions and Players')
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Count of players in each category--")
     sns.countplot(data['new_position'],palette='bone');
     plt.title('Number of players of each category');
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     def convert(value):
         out = value.replace('lbs', '')
@@ -122,6 +124,7 @@ if(option=="Visualizations"):
     plt.xlabel('Weight associated with the players(in kgs)', fontsize = 16)
     plt.ylabel('count of Players', fontsize = 16)
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Distribution of Height Among Players in FIFA19")
     plt.style.use('tableau-colorblind10')
@@ -130,6 +133,7 @@ if(option=="Visualizations"):
     plt.xlabel('Height associated with the player', fontsize = 16)
     plt.ylabel('count of Players', fontsize = 16)
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Top 20 countries with maximum players featured in FIFA19")
     data['Nationality'].value_counts().head(20).plot.bar();
@@ -137,6 +141,7 @@ if(option=="Visualizations"):
     plt.xlabel("Countries");
     plt.ylabel("Number of Players");
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Distribution of age in Some Top Clubs")
     top_club_names = ( 'Juventus','FC Barcelona', 'Chelsea', 'Real Madrid', 'Manchester City')
@@ -146,6 +151,7 @@ if(option=="Visualizations"):
     plt.xlabel('Clubs', fontsize=20)
     plt.ylabel('Age', fontsize=20);
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Distribution of age in Some Top Countries")
     countries_names = ('France', 'Brazil', 'Germany', 'Belgium', 'Spain', 'Croatia', 'Argentina', 'Portugal', 'England', 'Italy')
@@ -156,6 +162,7 @@ if(option=="Visualizations"):
     plt.xlabel('Countries', fontsize=20)
     plt.ylabel('Age', fontsize=20)
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Distribution of Overall Rating in FIFA19")
     sns.set(style = "dark", palette = "deep", color_codes = True)
@@ -166,6 +173,7 @@ if(option=="Visualizations"):
     ax.set_ylabel(ylabel = 'Number of players', fontsize = 16)
     ax.set_title(label = 'Histogram of players Overall Scores', fontsize = 20)
     st.pyplot(use_container_width=True)
+    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.subheader("⚽ Player Features chart for each category of players")
 
@@ -242,6 +250,7 @@ if(option=="Comparisions"):
         plt.title(player1+' vs '+player2, fontsize = 25)
         plt.show();
         st.pyplot(use_container_width=True)
+	st.set_option('deprecation.showPyplotGlobalUse', False)
     if(player1!="None" and player2!="None"):
         cal(player1,player2)
 
@@ -295,6 +304,3 @@ if(option=="Game"):
         st.write("Thanks for Playing.Try different Values to check How Lucky You Are!!")
 
     game(n1,n2)
-
-if __name__ == "__main__":
-	main()   
